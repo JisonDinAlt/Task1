@@ -44,13 +44,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassFolder\AbstractCandy.cs" />
+    <Compile Include="ClassFolder\CandySugar.cs" />
+    <Compile Include="ClassFolder\CandySugarSkin.cs" />
+    <Compile Include="ClassFolder\CandySugarSkinStuffing.cs" />
+    <Compile Include="ClassFolder\CandyWithoutSugar.cs" />
+    <Compile Include="ClassFolder\CandyWithoutSugarSkin.cs" />
     <Compile Include="InterfaceFolder\ICandyBasic.cs" />
+    <Compile Include="InterfaceFolder\IAromaty.cs" />
+    <Compile Include="InterfaceFolder\ISkin.cs" />
+    <Compile Include="InterfaceFolder\IStuffing.cs" />
     <Compile Include="InterfaceFolder\ISugarConcentration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BuilderFolder\" />

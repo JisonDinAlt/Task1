@@ -8,5 +8,6 @@ namespace Task1.InterfaceFolder
 {
     interface ICandyBasic
     {
+     
     }
 }

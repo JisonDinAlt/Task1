@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Task1.InterfaceFolder
 {
-    public interface ISugarConcentration
+    public interface IStuffing
     {
-        double SugarPerThing { get; }
+
+        string Stuffing { get; }
+
     }
 }

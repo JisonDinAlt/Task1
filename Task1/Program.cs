@@ -12,7 +12,31 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-           
+
+
+            CandySugar Candy1 = new CandySugar("Candy1",15,25);
+            Candy1.reWrite();
+            Console.ReadKey();
+
+            CandySugarSkin Candy2 = new CandySugarSkin("Candy2", 10, 20, "Глазурь");
+            Candy2.reWrite();
+            Console.ReadKey();
+
+            CandySugarSkinStuffing Candy3 = new CandySugarSkinStuffing("Candy3", 20, 30, "Глазурь", "Орехи");
+            Candy3.reWrite();
+            Console.ReadKey();
+
+            CandyWithoutSugar Candy4 = new CandyWithoutSugar("Candy4", 12);
+            Candy4.reWrite();
+            Console.ReadKey();
+
+            CandyWithoutSugarSkin Candy5 = new CandyWithoutSugarSkin("Candy5", 18, "Шоколад");
+            Candy5.reWrite();
+            Console.ReadKey();
+
+
+
         }
+           
     }
 }
