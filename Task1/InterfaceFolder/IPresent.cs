@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Task1.InterfaceFolder
 {
-    interface ICandyBasic
+     interface IPresent
     {
-         string CandyName { get;  }
-         double CandyWeight { get;  }
+        ICollection<ICandyBasic> Items { get; }
     }
 }

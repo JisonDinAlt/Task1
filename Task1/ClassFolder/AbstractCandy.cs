@@ -9,7 +9,7 @@ namespace Task1.ClassFolder
 {
     public abstract class AbstractCandy : ICandyBasic
     {
-        public string  CandyName { get; set; }
-        public double CandyWeight { get; set; }
+        public string  CandyName { get; protected set; }
+        public double CandyWeight { get; protected set; }
     }
 }
