@@ -12,7 +12,7 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-
+            
 
             CandySugar Candy1 = new CandySugar("Candy1",15,25);
             Candy1.reWrite();
@@ -34,7 +34,15 @@ namespace Task1
             Candy5.reWrite();
             Console.ReadKey();
 
+            List<AbstractCandy> Present = new List<AbstractCandy>();
+            Present.Add(Candy1);
+            Present.Add(Candy2);
+            Present.Add(Candy3);
+            Present.Add(Candy4);
+            Present.Add(Candy5);
 
+            foreach (var i in Present)
+                { Console.WriteLine(i); Console.ReadKey(); }
 
         }
            

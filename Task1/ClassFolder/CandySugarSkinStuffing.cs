@@ -7,13 +7,13 @@ using Task1.InterfaceFolder;
 
 namespace Task1.ClassFolder
 {
-    public class CandySugarSkinStuffing : AbstractCandy, ISugarConcentration, ISkin, IStuffing
+    public class CandySugarSkinStuffing : CandySugar, ISkin, IStuffing
     {
-        public double SugarPerThing { get; set; }
+     
         public string Skin { get; set; }
         public string Stuffing { get; set; }
-
-        public CandySugarSkinStuffing (string n, double w, double spt, string sk, string st)
+       
+        public CandySugarSkinStuffing (string n, double w, double spt, string sk, string st) : base (n,w,spt)
         {
             CandyName = n;
             CandyWeight = w;

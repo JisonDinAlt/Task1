@@ -8,6 +8,6 @@ namespace Task1.InterfaceFolder
 {
     public interface ISkin
     {
-        string Skin { get; }
+        string Skin { get;  }
     }
 }
