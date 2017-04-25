@@ -15,35 +15,49 @@ namespace Task1
             
 
             CandySugar Candy1 = new CandySugar("Candy1",15,25);
-            Candy1.reWrite();
-            Console.ReadKey();
-
             CandySugarSkin Candy2 = new CandySugarSkin("Candy2", 10, 20, "Глазурь");
-            Candy2.reWrite();
-            Console.ReadKey();
-
             CandySugarSkinStuffing Candy3 = new CandySugarSkinStuffing("Candy3", 20, 30, "Глазурь", "Орехи");
-            Candy3.reWrite();
-            Console.ReadKey();
-
             CandyWithoutSugar Candy4 = new CandyWithoutSugar("Candy4", 12);
-            Candy4.reWrite();
-            Console.ReadKey();
-
             CandyWithoutSugarSkin Candy5 = new CandyWithoutSugarSkin("Candy5", 18, "Шоколад");
-            Candy5.reWrite();
-            Console.ReadKey();
+           
 
-            List<AbstractCandy> Present = new List<AbstractCandy>();
+            List<ICandyBasic> Present = new List<ICandyBasic>();
             Present.Add(Candy1);
             Present.Add(Candy2);
             Present.Add(Candy3);
             Present.Add(Candy4);
             Present.Add(Candy5);
 
-            foreach (var i in Present)
-                { Console.WriteLine(i); Console.ReadKey(); }
 
+            string temp_sugar_string;
+            double temp_sugar_double = 0;
+            double temp_weight = 0;
+
+            Console.WriteLine("Введите содержание сахара для поиска конфеты с аналогичными параметрами");
+            temp_sugar_string = Console.ReadLine();
+
+            try
+            { temp_sugar_double = double.Parse(temp_sugar_string); }
+            catch { Console.WriteLine("Введите корректное число"); }
+
+           // Console.WriteLine(temp_sugar_double);
+
+            foreach (var i in Present)
+
+            {
+                 // Console.WriteLine(i.CandyName); Console.ReadKey();
+
+            if (i is ISugarConcentration) { temp_weight = temp_weight + i.CandyWeight; };
+                             
+
+               
+            }
+            
+       
+
+
+            Console.WriteLine("Вес подарка {0} ", temp_weight);
+            Console.ReadKey();
         }
            
     }
