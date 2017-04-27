@@ -28,14 +28,33 @@ namespace Task1.ClassFolder
             Items.Remove(item);
         }
 
-        public string CopmareBySugar(ISugarConcentration item)
+        public void ShowAll()
+        {
+            foreach (var item in this.Items)
+            {
+                Console.WriteLine("Название - {0}, вес - {1}", item.CandyName, item.CandyWeight);
+            }
+        }
+
+
+
+        public void  CopmareBySugar(double Sugar_value_for_compare)
 
         {
+            double z_count = 0;
+            foreach (var i in Items)
+            {
+                var z = i as ISugarConcentration;
+                if (z != null) { if (z.SugarPerThing == Sugar_value_for_compare) { Console.WriteLine("{0} сахара содержится в конфете {1}", Sugar_value_for_compare, i.CandyName); z_count++; } };
+            }
+            if (z_count == 0) { Console.WriteLine("В подарке нет конфет с содержанием сахара {0}", Sugar_value_for_compare); };
+            z_count = 0;
+            Console.WriteLine();
 
-             IEnumerable<ICandyBasic> query = from n in Items
-                                                     where n.CandyWeight == 10
-                                                     select n;
-            return "";
+
+
+
+       
         }
 
 
