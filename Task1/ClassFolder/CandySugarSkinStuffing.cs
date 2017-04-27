@@ -23,7 +23,6 @@ namespace Task1.ClassFolder
 
         }
 
-        public void reWrite()
-        { Console.WriteLine("название - {0}, Вес - {1}, Содержание сахара - {2}, Оболочка - {3}, Наполнитель - {4}", CandyName, CandyWeight, SugarPerThing, Skin, Stuffing); }
+        
     }
 }

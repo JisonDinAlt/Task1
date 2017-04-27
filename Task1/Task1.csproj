@@ -49,8 +49,8 @@
     <Compile Include="ClassFolder\CandySugarSkinStuffing.cs" />
     <Compile Include="ClassFolder\CandyWithoutSugar.cs" />
     <Compile Include="ClassFolder\CandyWithoutSugarSkin.cs" />
+    <Compile Include="ClassFolder\Gift.cs" />
     <Compile Include="InterfaceFolder\ICandyBasic.cs" />
-    <Compile Include="InterfaceFolder\IAromaty.cs" />
     <Compile Include="InterfaceFolder\IPresent.cs" />
     <Compile Include="InterfaceFolder\ISkin.cs" />
     <Compile Include="InterfaceFolder\IStuffing.cs" />

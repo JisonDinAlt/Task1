@@ -14,7 +14,6 @@ namespace Task1.ClassFolder
             CandyWeight = w;
         }
 
-        public void reWrite()
-        { Console.WriteLine("название - {0}, Вес - {1}", CandyName, CandyWeight); }
+     
     }
 }

@@ -8,6 +8,6 @@ namespace Task1.InterfaceFolder
 {
      interface IPresent
     {
-        ICollection<ICandyBasic> Items { get; }
+        IEnumerable<ICandyBasic> Items { get; }
     }
 }

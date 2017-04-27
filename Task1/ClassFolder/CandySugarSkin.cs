@@ -21,8 +21,7 @@ namespace Task1.ClassFolder
             Skin = sk;
         }
 
-        public void reWrite()
-        { Console.WriteLine("название - {0}, Вес - {1}, Содержание сахара - {2}, Оболочка - {3}", CandyName, CandyWeight, SugarPerThing, Skin); }
+       
 
     }
 }
