@@ -7,11 +7,36 @@ using Task1.InterfaceFolder;
 
 namespace Task1.ClassFolder
 {
-    class Gift
+    class Gift 
     {
 
         public ICollection<ICandyBasic> Items { get; protected set; }
         public string Name { get; protected set; }
+
+
+        public void SortByWeight ()
+        {
+            var result = from item in Items
+                         orderby item.CandyWeight
+                         select item;
+            foreach (var u in result)
+                Console.WriteLine("{0} - {1}", u.CandyName, u.CandyWeight);
+            Console.WriteLine();
+
+        }
+
+        public void SortByName()
+        {
+            var result = from item in Items
+                         orderby item.CandyName
+                         select item;
+            foreach (var u in result)
+                Console.WriteLine("{0} - {1}", u.CandyName, u.CandyWeight);
+            Console.WriteLine();
+
+        }
+
+
 
         public double WeigtSum
         {
@@ -50,16 +75,10 @@ namespace Task1.ClassFolder
             if (z_count == 0) { Console.WriteLine("В подарке нет конфет с содержанием сахара {0}", Sugar_value_for_compare); };
             z_count = 0;
             Console.WriteLine();
-
-
-
-
-       
+                               
         }
 
-
-
-
+             
 
         public Gift(string name, ICollection<ICandyBasic> items)
         {

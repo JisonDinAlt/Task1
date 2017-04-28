@@ -32,13 +32,17 @@ namespace Task1
             Present1.AddCandy(Candy2);
 
 
-            Console.WriteLine(Present1.WeigtSum);
+           
 
             Present1.ShowAll();
 
             Present1.CopmareBySugar(25);
 
+            Present1.SortByWeight();
 
+            Present1.SortByName();
+
+            Console.WriteLine(Present1.WeigtSum);
 
             Console.ReadKey();
 
