@@ -33,9 +33,8 @@ namespace Task1
             Present1.ShowAll();
             Present1.SortByWeight();
             Present1.SortByName();
-            Console.WriteLine(Present1.WeigtSum);
+            var resultWeightSum = Present1.WeigtSum.ToString();
             Present1.CopmareBySugar(20);
-            Console.ReadKey();
         }
     }
 }

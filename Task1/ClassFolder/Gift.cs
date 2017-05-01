@@ -56,10 +56,10 @@ namespace Task1.ClassFolder
             { item.ToString(); }
         }
 
-        public void CopmareBySugar(double Sugar_value_for_compare)
+        public void CopmareBySugar(double sugarValueForCompare)
         {
             var result = from item in Items
-                         where item.SweetSugar == Sugar_value_for_compare
+                         where item.SweetSugar == sugarValueForCompare
                          select item;
                          
             foreach (var u in result)
