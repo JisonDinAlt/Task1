@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Task1.InterfaceFolder
 {
-    interface ICandyBasic
+    interface IBasicSweet
     {
-         string CandyName { get;  }
-         double CandyWeight { get;  }
+        string SweetName { get; }
+        double SweetWeight { get; }
+        double SweetSugar { get; }
     }
 }

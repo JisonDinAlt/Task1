@@ -43,28 +43,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassFolder\AbstractCandy.cs" />
-    <Compile Include="ClassFolder\CandySugar.cs" />
-    <Compile Include="ClassFolder\CandySugarSkin.cs" />
-    <Compile Include="ClassFolder\CandySugarSkinStuffing.cs" />
-    <Compile Include="ClassFolder\CandyWithoutSugar.cs" />
-    <Compile Include="ClassFolder\CandyWithoutSugarSkin.cs" />
+    <Compile Include="ClassFolder\BasicCandy.cs" />
+    <Compile Include="ClassFolder\BasicCookies.cs" />
+    <Compile Include="ClassFolder\BasicSweet.cs" />
+    <Compile Include="ClassFolder\CandyAlenka.cs" />
+    <Compile Include="ClassFolder\CandyFondant.cs" />
+    <Compile Include="ClassFolder\CandyTruffle.cs" />
+    <Compile Include="ClassFolder\CookiesBiscuit.cs" />
+    <Compile Include="ClassFolder\CookiesGingerbreadMan.cs" />
     <Compile Include="ClassFolder\Gift.cs" />
-    <Compile Include="InterfaceFolder\ICandyBasic.cs" />
-    <Compile Include="InterfaceFolder\IPresent.cs" />
-    <Compile Include="InterfaceFolder\ISkin.cs" />
-    <Compile Include="InterfaceFolder\IStuffing.cs" />
-    <Compile Include="InterfaceFolder\ISugarConcentration.cs" />
+    <Compile Include="InterfaceFolder\IBacisCookies.cs" />
+    <Compile Include="InterfaceFolder\IBasicSweet.cs" />
+    <Compile Include="InterfaceFolder\IBasicCandy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BuilderFolder\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

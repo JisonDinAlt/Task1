@@ -9,46 +9,43 @@ namespace Task1.ClassFolder
 {
     class Gift 
     {
-
-        public ICollection<ICandyBasic> Items { get; protected set; }
+        public ICollection<IBasicSweet> Items { get; protected set; }
         public string Name { get; protected set; }
-
+        public Gift(string name, ICollection<IBasicSweet> items)
+        {
+            Name = name;
+            Items = items;
+        }
 
         public void SortByWeight ()
         {
             var result = from item in Items
-                         orderby item.CandyWeight
+                         orderby item.SweetWeight
                          select item;
             foreach (var u in result)
-                Console.WriteLine("{0} - {1}", u.CandyName, u.CandyWeight);
-            Console.WriteLine();
-
+            { u.ToString(); }
         }
 
         public void SortByName()
         {
             var result = from item in Items
-                         orderby item.CandyName
+                         orderby item.SweetName
                          select item;
             foreach (var u in result)
-                Console.WriteLine("{0} - {1}", u.CandyName, u.CandyWeight);
-            Console.WriteLine();
-
+            { u.ToString(); }
         }
-
-
 
         public double WeigtSum
         {
-            get { return Items.Sum(x => x.CandyWeight); }
+            get { return Items.Sum(x => x.SweetWeight); }
         }
 
-        public void AddCandy(ICandyBasic item)
+        public void AddSweet(IBasicSweet item)
         {
             Items.Add(item);
         }
 
-        public void DeletedCandy(ICandyBasic item)
+        public void DeletedSweet (IBasicSweet item)
         {
             Items.Remove(item);
         }
@@ -56,35 +53,17 @@ namespace Task1.ClassFolder
         public void ShowAll()
         {
             foreach (var item in this.Items)
-            {
-                Console.WriteLine("Название - {0}, вес - {1}", item.CandyName, item.CandyWeight);
-            }
+            { item.ToString(); }
         }
 
-
-
-        public void  CopmareBySugar(double Sugar_value_for_compare)
-
+        public void CopmareBySugar(double Sugar_value_for_compare)
         {
-            double z_count = 0;
-            foreach (var i in Items)
-            {
-                var z = i as ISugarConcentration;
-                if (z != null) { if (z.SugarPerThing == Sugar_value_for_compare) { Console.WriteLine("{0} сахара содержится в конфете {1}", Sugar_value_for_compare, i.CandyName); z_count++; } };
-            }
-            if (z_count == 0) { Console.WriteLine("В подарке нет конфет с содержанием сахара {0}", Sugar_value_for_compare); };
-            z_count = 0;
-            Console.WriteLine();
-                               
+            var result = from item in Items
+                         where item.SweetSugar == Sugar_value_for_compare
+                         select item;
+                         
+            foreach (var u in result)
+            { u.ToString(); }
         }
-
-             
-
-        public Gift(string name, ICollection<ICandyBasic> items)
-        {
-            Name = name;
-            Items = items;
-        }
-
     }
 }

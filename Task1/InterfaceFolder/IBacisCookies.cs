@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Task1.InterfaceFolder
 {
-     interface IPresent
+    interface IBacisCookies
     {
-        IEnumerable<ICandyBasic> Items { get; }
+        string CookiesPastry { get; }
     }
 }
