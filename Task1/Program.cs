@@ -12,14 +12,14 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            CandyAlenka Sweet1 = new CandyAlenka("Alenka", 100, 10, "Chokolate");
-            CandyAlenka Sweet2 = new CandyAlenka("Alenka", 150, 15, "Chokolate");
-            CandyFondant Sweet3 = new CandyFondant ("Fondant", 200, 20, "Fondant");
-            CandyTruffle Sweet4 = new CandyTruffle ("Truffle", 300, 30, "Ganache");
-            CookiesBiscuit Sweet5 = new CookiesBiscuit("Biscuit", 400, 40, "Biscuit");
-            CookiesGingerbreadMan Sweet6 = new CookiesGingerbreadMan("CookiesGingerbreadMan", 500, 50, "Gingerbread");
-
             Gift Present1 = new Gift("Gift1", new List<IBasicSweet>());
+
+            var Sweet1 = new CandyAlenka ();
+            var Sweet2 = new CandyFondant();
+            var Sweet3 = new CandyFondant();
+            var Sweet4 = new CandyTruffle();
+            var Sweet5 = new CookiesBiscuit();
+            var Sweet6 = new CookiesGingerbreadMan();
 
             Present1.AddSweet(Sweet1);
             Present1.AddSweet(Sweet2);

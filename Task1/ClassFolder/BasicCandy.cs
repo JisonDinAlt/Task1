@@ -9,6 +9,7 @@ namespace Task1.ClassFolder
 {
     public class BasicCandy : BasicSweet, IBasicCandy
       {
+        public BasicCandy() { }
         public BasicCandy (string name, double weight, double sugar, string filling)
         {
             SweetName = name;

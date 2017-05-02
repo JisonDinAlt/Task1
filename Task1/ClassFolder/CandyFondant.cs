@@ -8,12 +8,12 @@ namespace Task1.ClassFolder
 {
     class CandyFondant : BasicCandy
     {
-        public CandyFondant (string name, double weight, double sugar, string filling): base (name, weight, sugar, filling)
+        public CandyFondant ()
         {
-            SweetName = name;
-            SweetWeight = weight;
-            SweetSugar = sugar;
-            CandyFilling = filling;
+            SweetName = "Fondat";
+            SweetWeight = 200;
+            SweetSugar = 20;
+            CandyFilling = "Fondant";
         }
     }
 }
